@@ -134,8 +134,6 @@ GameObject:
   - component: {fileID: 19180240}
   - component: {fileID: 19180243}
   - component: {fileID: 19180242}
-  - component: {fileID: 19180241}
-  - component: {fileID: 19180244}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -159,27 +157,6 @@ Transform:
   m_Father: {fileID: 1514391502}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &19180241
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 19180239}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &19180242
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -230,19 +207,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19180239}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &19180244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 19180239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ec2d8623e27936419436574e53621a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 4097271270599859502, guid: ff01477ebbfdb8641aadfaabf684b552, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5ec2e8f6f4f3e4bb81becdf10277fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
+  health:
+    _value: 1000
   debugHealthDiff: 500
 --- !u!65 &1013565438
 BoxCollider:
@@ -600,7 +565,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -807,6 +772,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1583985496}
+  - component: {fileID: 1583985497}
   m_Layer: 0
   m_Name: ShootingPoint
   m_TagString: Untagged
@@ -829,6 +795,19 @@ Transform:
   m_Father: {fileID: 19180240}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1583985497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583985495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec2d8623e27936419436574e53621a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 4097271270599859502, guid: ff01477ebbfdb8641aadfaabf684b552, type: 3}
 --- !u!1 &1985383094
 GameObject:
   m_ObjectHideFlags: 0
