@@ -1184,6 +1184,7 @@ GameObject:
   - component: {fileID: 964129054}
   - component: {fileID: 964129053}
   - component: {fileID: 964129055}
+  - component: {fileID: 964129056}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1265,6 +1266,23 @@ MonoBehaviour:
   maxHealth:
     _value: 3
   debugHealthDiff: 1
+--- !u!114 &964129056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964129051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4b179d0d627196c8522919a506980b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 11400000, guid: a7ea4689c54819eac825258d3c844b6d, type: 2}
+  - {fileID: 11400000, guid: 5364f944a9d591b5ea0fdd93806ca7e2, type: 2}
+  - {fileID: 11400000, guid: df84687a295aa3d27b973da81ca9e8f1, type: 2}
+  projectileShooting: {fileID: 1583985497}
 --- !u!1 &980238195
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,9 +1447,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health:
-    _value: 2
+    _value: 10
   maxHealth:
-    _value: 2
+    _value: 10
   debugHealthDiff: 1
 --- !u!65 &1013565438
 BoxCollider:
@@ -2043,6 +2061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4097271270599859502, guid: ff01477ebbfdb8641aadfaabf684b552, type: 3}
+  weaponData: {fileID: 0}
 --- !u!1 &1584566085
 GameObject:
   m_ObjectHideFlags: 0

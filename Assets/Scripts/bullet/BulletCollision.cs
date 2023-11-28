@@ -5,18 +5,8 @@ using UnityEngine;
 
 public class BulletCollision : MonoBehaviour
 {
-    public int damage = 1;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public WeaponData weaponData;
+    
 /*
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.TryGetComponent<HealthComponent>(out HealthComponent component)){
@@ -27,7 +17,7 @@ public class BulletCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.TryGetComponent<HealthComponent>(out HealthComponent component)){
-            component.health.Value -= damage;
+            component.health.Value -= weaponData.damage;
         }
         Destroy(gameObject);
     }

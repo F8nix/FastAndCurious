@@ -6,7 +6,7 @@ public class ProjectileShooting : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform bulletPrefab;
-    int forwardForce = 1000;
+    public WeaponData weaponData;
     void Start()
     {
         
@@ -16,9 +16,10 @@ public class ProjectileShooting : MonoBehaviour
     void Update()
     {
         if (Input.GetButtonDown("Shoot")) {
-        //if (Input.GetKeyDown(KeyCode.Space)) {
+        //if (Input.GetKeyDown(KeyCode.Space)) { //weaponData.bulletPrefab jak w SO bedzie + delay
             Transform bulletInstance = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-            bulletInstance.GetComponent<Rigidbody>().AddForce(transform.forward * forwardForce);
+            bulletInstance.GetComponent<Rigidbody>().velocity = (transform.forward * weaponData.projectileSpeed);
+            bulletInstance.GetComponent<BulletCollision>().weaponData = weaponData;
         }
     }
 }
