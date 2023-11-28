@@ -70,14 +70,15 @@
     <Compile Include="Assets/Scripts/bullet/BulletCollision.cs" />
     <Compile Include="Assets/Scripts/UI/ExitGame.cs" />
     <Compile Include="Assets/Scripts/LookupTargetting.cs" />
-    <Compile Include="Assets/Scripts/EventableType.cs" />
+    <Compile Include="Assets/Scripts/util/EventableType.cs" />
     <Compile Include="Assets/Scripts/bullet/ProjectileShooting.cs" />
     <Compile Include="Assets/Scripts/CamOntoTrigger.cs" />
     <Compile Include="Assets/Scripts/DamageOnTrigger.cs" />
     <Compile Include="Assets/Scripts/HealthComponent.cs" />
-    <Compile Include="Assets/Scripts/PlayerController.cs" />
+    <Compile Include="Assets/Scripts/player/PlayerController.cs" />
     <Compile Include="Assets/Scripts/UI/mainMenu/RadioButtonSystem.cs" />
     <Compile Include="Assets/Scripts/UI/HealthbarUpdate.cs" />
+    <Compile Include="Assets/Scripts/player/PlayerColorSwap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
