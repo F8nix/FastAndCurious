@@ -23,6 +23,11 @@ public class HealthComponent : MonoBehaviour
         }
     }
 
+    public IEnumerator ResetHealth() {
+        yield return new WaitForEndOfFrame();
+        health.Value = maxHealth;
+    } 
+
 #if UNITY_EDITOR
     [Header("Debug Health")]
     [SerializeField] private float debugHealthDiff;
