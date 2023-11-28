@@ -5,21 +5,22 @@ using UnityEngine;
 public class ProjectileShooting : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform bulletPrefab;
     public WeaponData weaponData;
-    void Start()
+    private float cooldown;
+    void Update()
     {
-        
+        if(cooldown > 0){
+            cooldown -= Time.deltaTime;
+        }
     }
 
     // Update is called once per frame
-    void Update()
+    public void Shoot()
     {
-        if (Input.GetButtonDown("Shoot")) {
-        //if (Input.GetKeyDown(KeyCode.Space)) { //weaponData.bulletPrefab jak w SO bedzie + delay
-            Transform bulletInstance = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-            bulletInstance.GetComponent<Rigidbody>().velocity = (transform.forward * weaponData.projectileSpeed);
-            bulletInstance.GetComponent<BulletCollision>().weaponData = weaponData;
-        }
+        if(cooldown > 0) return;
+        Transform bulletInstance = Instantiate(weaponData.bulletPrefab.transform, transform.position, Quaternion.identity);
+        bulletInstance.GetComponent<Rigidbody>().velocity = (transform.forward * weaponData.projectileSpeed);
+        bulletInstance.GetComponent<BulletCollision>().weaponData = weaponData;
+        cooldown = weaponData.firingDelay;
     }
 }

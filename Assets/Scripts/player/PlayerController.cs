@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShortcutManagement;
 using UnityEngine;
 
 [RequireComponent (typeof (CharacterController))]
@@ -9,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 450;
     public float walkSpeed = 5;
     public float runSpeed = 8;
+
+    public ProjectileShooting shooter;
 
     private Quaternion targetRotation;
 
@@ -35,5 +38,9 @@ public class PlayerController : MonoBehaviour
         motion += Vector3.up * -8;
 
         controller.Move(motion * Time.deltaTime);
+
+        if (Input.GetButtonDown("Shoot")){
+            shooter.Shoot();
+        }
     }
 }

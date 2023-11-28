@@ -82,6 +82,7 @@
     <Compile Include="Assets/Scripts/UI/mainMenu/RadioButtonSystem.cs" />
     <Compile Include="Assets/Scripts/enemy/TeleportOnNoHp.cs" />
     <Compile Include="Assets/Scripts/UI/HealthbarUpdate.cs" />
+    <Compile Include="Assets/Scripts/enemy/TurretController.cs" />
     <Compile Include="Assets/Scripts/player/PlayerColorSwap.cs" />
   </ItemGroup>
   <ItemGroup>

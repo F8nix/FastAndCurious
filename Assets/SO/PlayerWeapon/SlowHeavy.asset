@@ -15,5 +15,5 @@ MonoBehaviour:
   damage: 3
   projectileSpeed: 2
   firingDelay: 1
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1832382702614960272, guid: ff01477ebbfdb8641aadfaabf684b552, type: 3}
   weaponPrefab: {fileID: 0}

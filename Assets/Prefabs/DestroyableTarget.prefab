@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9115670199985851386}
   - component: {fileID: 7514960010384912791}
   - component: {fileID: 7181005320492612146}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: EnemyCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4517701987780516238}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8781355516653648776}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 7784367075418900968}
   - component: {fileID: 675120231885888731}
   - component: {fileID: 23689409064789399}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HpSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 8334560148150797342}
   - component: {fileID: 6795913291684362364}
   - component: {fileID: 4131737176920964780}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DestroyableTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 4643324362766115694}
   - component: {fileID: 2572535935333447580}
   - component: {fileID: 6411146233988354473}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 1299989585627914308}
   - component: {fileID: 1733015592646396873}
   - component: {fileID: 7188939537364567973}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 7212771499613338323}
   - component: {fileID: 6836435660248677655}
   - component: {fileID: 4929143082139126486}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}

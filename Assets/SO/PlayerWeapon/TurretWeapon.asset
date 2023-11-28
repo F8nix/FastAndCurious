@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7de4cbb2f3b454f2e9d347df59575e34, type: 3}
-  m_Name: Medium
+  m_Name: TurretWeapon
   m_EditorClassIdentifier: 
-  damage: 2
-  projectileSpeed: 10
-  firingDelay: 0.4
+  damage: 1
+  projectileSpeed: 5
+  firingDelay: 0.5
   bulletPrefab: {fileID: 1832382702614960272, guid: ff01477ebbfdb8641aadfaabf684b552, type: 3}
   weaponPrefab: {fileID: 0}
