@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/UI/mainMenu/LoadPrototypeGameplay.cs" />
     <Compile Include="Assets/Scripts/TimeoutDestroy.cs" />
+    <Compile Include="Assets/Scripts/UI/LookAtCamera.cs" />
     <Compile Include="Assets/Scripts/bullet/BulletCollision.cs" />
     <Compile Include="Assets/Scripts/UI/ExitGame.cs" />
     <Compile Include="Assets/Scripts/LookupTargetting.cs" />
@@ -76,7 +77,7 @@
     <Compile Include="Assets/Scripts/HealthComponent.cs" />
     <Compile Include="Assets/Scripts/PlayerController.cs" />
     <Compile Include="Assets/Scripts/UI/mainMenu/RadioButtonSystem.cs" />
-    <Compile Include="Assets/Scripts/UI/SliderUpdate.cs" />
+    <Compile Include="Assets/Scripts/UI/HealthbarUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

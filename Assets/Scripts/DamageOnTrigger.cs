@@ -7,7 +7,7 @@ public class DamageOnTrigger : MonoBehaviour
     public int damage = 1;
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.TryGetComponent<HealthComponent>(out HealthComponent component)){
-            component.health -= damage;
+            component.health.Value -= damage;
         }
     }
 }

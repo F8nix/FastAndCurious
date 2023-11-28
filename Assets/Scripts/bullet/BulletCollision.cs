@@ -27,7 +27,7 @@ public class BulletCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.TryGetComponent<HealthComponent>(out HealthComponent component)){
-            component.health -= damage;
+            component.health.Value -= damage;
         }
         Destroy(gameObject);
     }
