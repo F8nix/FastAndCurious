@@ -14,6 +14,7 @@ public class EndCounter : MonoBehaviour
             endCounter.text = $"To DEACTIVATION #{Math.Ceiling(endTimeValue)}#";
         } else {
             //jakis event YouGotDeactivated jakby duzo wiecej zaczelo sie dziac, na razie na chama:
+            MoneyManager.Instance.SaveMoneyState();
             SceneManager.LoadScene("Shop");
         }
     }

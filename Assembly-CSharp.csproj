@@ -68,11 +68,14 @@
     <Compile Include="Assets/InputActions/PlayerInputActions.cs" />
     <Compile Include="Assets/Scripts/upgAndMoney/MoneyOnTrigger.cs" />
     <Compile Include="Assets/Scripts/TimeoutDestroy.cs" />
+    <Compile Include="Assets/Scripts/player/PlayerBuilder.cs" />
     <Compile Include="Assets/Scripts/UI/LookAtCamera.cs" />
     <Compile Include="Assets/Scripts/bullet/BulletCollision.cs" />
+    <Compile Include="Assets/Scripts/HierarchyManip.cs" />
     <Compile Include="Assets/Scripts/enemy/DestroyOnNoHp.cs" />
     <Compile Include="Assets/Scripts/UI/ExitGame.cs" />
     <Compile Include="Assets/Scripts/managers/PassiveMoneyCounter.cs" />
+    <Compile Include="Assets/Scripts/player/IndicatorColor.cs" />
     <Compile Include="Assets/Scripts/LookupTargetting.cs" />
     <Compile Include="Assets/Scripts/util/EventableType.cs" />
     <Compile Include="Assets/Scripts/bullet/ProjectileShooting.cs" />
