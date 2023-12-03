@@ -5,7 +5,6 @@ using UnityEditor.ShortcutManagement;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-//[RequireComponent (typeof (CharacterController))]
 public class PlayerController : MonoBehaviour
 {
     // Handing
@@ -32,16 +31,14 @@ public class PlayerController : MonoBehaviour
 
         playerInputActions.Player.Shoot.performed += DoJump;
         playerInputActions.Player.Shoot.Enable();
-    }
 
-    private void DoJump(InputAction.CallbackContext context)
-    {
-        shooter.Shoot();
+        playerInputActions.Player.Run.Enable();
     }
 
     private void OnDisable() {
         movement.Disable();
         playerInputActions.Player.Shoot.Disable();
+        playerInputActions.Player.Run.Disable();
     }
 
     void Start()
@@ -51,7 +48,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log("Movement value: " + movement.ReadValue<Vector2>());
         Vector2 movementValue = movement.ReadValue<Vector2>();
         Vector3 input = new Vector3(movementValue.x, 0, movementValue.y);
 
@@ -63,15 +59,14 @@ public class PlayerController : MonoBehaviour
         Vector3 motion = input;
 
         motion *= (Mathf.Abs(input.x) == 1 && Mathf.Abs(input.z) == 1) ? .7f : 1;
-        motion *= (Input.GetButton("Run"))?runSpeed:walkSpeed;
+        motion *= playerInputActions.Player.Run.IsPressed()?runSpeed:walkSpeed;
         motion += Vector3.up * -8;
 
         controller.Move(motion * Time.deltaTime);
+    }
 
-        /*
-        if (Input.GetButtonDown("Shoot")){
-            shooter.Shoot();
-        }
-        */
+     private void DoJump(InputAction.CallbackContext context)
+    {
+        shooter.Shoot();
     }
 }
