@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.ShortcutManagement;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-[RequireComponent (typeof (CharacterController))]
+//[RequireComponent (typeof (CharacterController))]
 public class PlayerController : MonoBehaviour
 {
     // Handing
@@ -17,6 +19,31 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController controller;
 
+    private PlayerInputActions playerInputActions;
+    private InputAction movement;
+
+    private void Awake() {
+        playerInputActions = new PlayerInputActions();
+    }
+
+    private void OnEnable() {
+        movement = playerInputActions.Player.Movement;
+        movement.Enable();
+
+        playerInputActions.Player.Shoot.performed += DoJump;
+        playerInputActions.Player.Shoot.Enable();
+    }
+
+    private void DoJump(InputAction.CallbackContext context)
+    {
+        shooter.Shoot();
+    }
+
+    private void OnDisable() {
+        movement.Disable();
+        playerInputActions.Player.Shoot.Disable();
+    }
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -24,7 +51,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Vector3 input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        //Debug.Log("Movement value: " + movement.ReadValue<Vector2>());
+        Vector2 movementValue = movement.ReadValue<Vector2>();
+        Vector3 input = new Vector3(movementValue.x, 0, movementValue.y);
 
         if (input != Vector3.zero) {
             targetRotation = Quaternion.LookRotation(input);
@@ -39,8 +68,10 @@ public class PlayerController : MonoBehaviour
 
         controller.Move(motion * Time.deltaTime);
 
+        /*
         if (Input.GetButtonDown("Shoot")){
             shooter.Shoot();
         }
+        */
     }
 }
