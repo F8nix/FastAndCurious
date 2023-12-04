@@ -33,6 +33,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "ChangeWeapon",
+                    "type": "Button",
+                    "id": "7f6427d7-4918-4984-8442-efec5c1b66ca",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Build",
                     "type": "Button",
                     "id": "af5f05a6-70ab-4238-9845-3ba4b530b7b6",
@@ -42,9 +51,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ChangeWeapon",
+                    "name": "ChangeBuidling",
                     "type": "Button",
-                    "id": "7f6427d7-4918-4984-8442-efec5c1b66ca",
+                    "id": "bc0af539-f2f5-408f-8592-5ac1ef9c70f7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RotateIndicator",
+                    "type": "Button",
+                    "id": "96fc86e7-bbf7-4808-ad60-2bf4bd4b43c5",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -131,61 +149,6 @@
                 },
                 {
                     "name": "",
-                    "id": "62586bb3-88b3-4232-9344-99f161f944e7",
-                    "path": "<Keyboard>/upArrow",
-                    "interactions": "",
-                    "processors": "Scale",
-                    "groups": "",
-                    "action": "Build",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "439946e3-d4cf-4775-8083-a7da3dc7d8eb",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "Scale(factor=2)",
-                    "groups": "",
-                    "action": "Build",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7540f110-342b-4523-b199-1b99b4d13cf8",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "Scale(factor=3)",
-                    "groups": "",
-                    "action": "Build",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "85a6de7e-1740-43e1-9fad-2671e1ff2224",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "Scale(factor=4)",
-                    "groups": "",
-                    "action": "Build",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c51658f4-1060-4994-ad14-de0caf041a5b",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "Scale(factor=5)",
-                    "groups": "",
-                    "action": "Build",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "6d82b1e3-880d-4a35-ab4b-b49a186afc07",
                     "path": "<Keyboard>/1",
                     "interactions": "",
@@ -214,6 +177,61 @@
                     "processors": "Scale(factor=3)",
                     "groups": "",
                     "action": "ChangeWeapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c51658f4-1060-4994-ad14-de0caf041a5b",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "Scale(factor=5)",
+                    "groups": "",
+                    "action": "Build",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6b1a9e56-e181-4096-951e-984eb44b58af",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "Scale(factor=-1)",
+                    "groups": "",
+                    "action": "ChangeBuidling",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7912b50c-04e9-488e-ae2a-78f6746fe2ea",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "Scale",
+                    "groups": "",
+                    "action": "ChangeBuidling",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "afbc6787-34a3-4dd4-8baa-80dffc4bac86",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "Scale(factor=-1)",
+                    "groups": "",
+                    "action": "RotateIndicator",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4cb34779-eb20-41ed-b6c4-cf74a82c96f2",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "Scale",
+                    "groups": "",
+                    "action": "RotateIndicator",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

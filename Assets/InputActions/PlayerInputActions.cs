@@ -55,6 +55,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""ChangeWeapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""7f6427d7-4918-4984-8442-efec5c1b66ca"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Build"",
                     ""type"": ""Button"",
                     ""id"": ""af5f05a6-70ab-4238-9845-3ba4b530b7b6"",
@@ -64,9 +73,18 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""ChangeWeapon"",
+                    ""name"": ""ChangeBuidling"",
                     ""type"": ""Button"",
-                    ""id"": ""7f6427d7-4918-4984-8442-efec5c1b66ca"",
+                    ""id"": ""bc0af539-f2f5-408f-8592-5ac1ef9c70f7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RotateIndicator"",
+                    ""type"": ""Button"",
+                    ""id"": ""96fc86e7-bbf7-4808-ad60-2bf4bd4b43c5"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -153,61 +171,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""62586bb3-88b3-4232-9344-99f161f944e7"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": ""Scale"",
-                    ""groups"": """",
-                    ""action"": ""Build"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""439946e3-d4cf-4775-8083-a7da3dc7d8eb"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": ""Scale(factor=2)"",
-                    ""groups"": """",
-                    ""action"": ""Build"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7540f110-342b-4523-b199-1b99b4d13cf8"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": ""Scale(factor=3)"",
-                    ""groups"": """",
-                    ""action"": ""Build"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""85a6de7e-1740-43e1-9fad-2671e1ff2224"",
-                    ""path"": ""<Keyboard>/rightArrow"",
-                    ""interactions"": """",
-                    ""processors"": ""Scale(factor=4)"",
-                    ""groups"": """",
-                    ""action"": ""Build"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c51658f4-1060-4994-ad14-de0caf041a5b"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": ""Scale(factor=5)"",
-                    ""groups"": """",
-                    ""action"": ""Build"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""6d82b1e3-880d-4a35-ab4b-b49a186afc07"",
                     ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
@@ -238,6 +201,61 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""ChangeWeapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c51658f4-1060-4994-ad14-de0caf041a5b"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale(factor=5)"",
+                    ""groups"": """",
+                    ""action"": ""Build"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6b1a9e56-e181-4096-951e-984eb44b58af"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale(factor=-1)"",
+                    ""groups"": """",
+                    ""action"": ""ChangeBuidling"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7912b50c-04e9-488e-ae2a-78f6746fe2ea"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale"",
+                    ""groups"": """",
+                    ""action"": ""ChangeBuidling"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""afbc6787-34a3-4dd4-8baa-80dffc4bac86"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale(factor=-1)"",
+                    ""groups"": """",
+                    ""action"": ""RotateIndicator"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4cb34779-eb20-41ed-b6c4-cf74a82c96f2"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale"",
+                    ""groups"": """",
+                    ""action"": ""RotateIndicator"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -249,8 +267,10 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
         m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
-        m_Player_Build = m_Player.FindAction("Build", throwIfNotFound: true);
         m_Player_ChangeWeapon = m_Player.FindAction("ChangeWeapon", throwIfNotFound: true);
+        m_Player_Build = m_Player.FindAction("Build", throwIfNotFound: true);
+        m_Player_ChangeBuidling = m_Player.FindAction("ChangeBuidling", throwIfNotFound: true);
+        m_Player_RotateIndicator = m_Player.FindAction("RotateIndicator", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -315,8 +335,10 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Shoot;
     private readonly InputAction m_Player_Run;
-    private readonly InputAction m_Player_Build;
     private readonly InputAction m_Player_ChangeWeapon;
+    private readonly InputAction m_Player_Build;
+    private readonly InputAction m_Player_ChangeBuidling;
+    private readonly InputAction m_Player_RotateIndicator;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -324,8 +346,10 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
         public InputAction @Run => m_Wrapper.m_Player_Run;
-        public InputAction @Build => m_Wrapper.m_Player_Build;
         public InputAction @ChangeWeapon => m_Wrapper.m_Player_ChangeWeapon;
+        public InputAction @Build => m_Wrapper.m_Player_Build;
+        public InputAction @ChangeBuidling => m_Wrapper.m_Player_ChangeBuidling;
+        public InputAction @RotateIndicator => m_Wrapper.m_Player_RotateIndicator;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -344,12 +368,18 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Run.started += instance.OnRun;
             @Run.performed += instance.OnRun;
             @Run.canceled += instance.OnRun;
-            @Build.started += instance.OnBuild;
-            @Build.performed += instance.OnBuild;
-            @Build.canceled += instance.OnBuild;
             @ChangeWeapon.started += instance.OnChangeWeapon;
             @ChangeWeapon.performed += instance.OnChangeWeapon;
             @ChangeWeapon.canceled += instance.OnChangeWeapon;
+            @Build.started += instance.OnBuild;
+            @Build.performed += instance.OnBuild;
+            @Build.canceled += instance.OnBuild;
+            @ChangeBuidling.started += instance.OnChangeBuidling;
+            @ChangeBuidling.performed += instance.OnChangeBuidling;
+            @ChangeBuidling.canceled += instance.OnChangeBuidling;
+            @RotateIndicator.started += instance.OnRotateIndicator;
+            @RotateIndicator.performed += instance.OnRotateIndicator;
+            @RotateIndicator.canceled += instance.OnRotateIndicator;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -363,12 +393,18 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Run.started -= instance.OnRun;
             @Run.performed -= instance.OnRun;
             @Run.canceled -= instance.OnRun;
-            @Build.started -= instance.OnBuild;
-            @Build.performed -= instance.OnBuild;
-            @Build.canceled -= instance.OnBuild;
             @ChangeWeapon.started -= instance.OnChangeWeapon;
             @ChangeWeapon.performed -= instance.OnChangeWeapon;
             @ChangeWeapon.canceled -= instance.OnChangeWeapon;
+            @Build.started -= instance.OnBuild;
+            @Build.performed -= instance.OnBuild;
+            @Build.canceled -= instance.OnBuild;
+            @ChangeBuidling.started -= instance.OnChangeBuidling;
+            @ChangeBuidling.performed -= instance.OnChangeBuidling;
+            @ChangeBuidling.canceled -= instance.OnChangeBuidling;
+            @RotateIndicator.started -= instance.OnRotateIndicator;
+            @RotateIndicator.performed -= instance.OnRotateIndicator;
+            @RotateIndicator.canceled -= instance.OnRotateIndicator;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -391,7 +427,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
-        void OnBuild(InputAction.CallbackContext context);
         void OnChangeWeapon(InputAction.CallbackContext context);
+        void OnBuild(InputAction.CallbackContext context);
+        void OnChangeBuidling(InputAction.CallbackContext context);
+        void OnRotateIndicator(InputAction.CallbackContext context);
     }
 }

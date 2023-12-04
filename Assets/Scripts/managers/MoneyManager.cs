@@ -25,6 +25,7 @@ public class MoneyManager : MonoBehaviour
     private void Start() {
         DontDestroyOnLoad(this);
         money = PlayerPrefs.GetInt("Money");
+        moneyCounter.text = "money";
     }
 
     public void SaveMoneyState() {

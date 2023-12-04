@@ -26,7 +26,7 @@ public class TurretController : MonoBehaviour
         targetPosition.y = 0;
         var rotatorPosition = turretRotator.position;
         rotatorPosition.y = 0;
-        Quaternion targetRotation = Quaternion.LookRotation(rotatorPosition - targetPosition);
+        Quaternion targetRotation = Quaternion.LookRotation(targetPosition - rotatorPosition);
         turretRotator.rotation = Quaternion.Slerp(turretRotator.rotation, targetRotation, Time.deltaTime * rotationSpeed);
         shooter.Shoot();
     }

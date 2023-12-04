@@ -31,11 +31,7 @@ public class WeaponChange : MonoBehaviour
 
     private void WeaponManager(InputAction.CallbackContext context)
     {
-        int weaponsAmount = 3; //would love to update it dynamically
-        for(int weaponIndex = 0; weaponIndex < weaponsAmount; weaponIndex++) {
-            if(context.ReadValue<float>() == weaponIndex+1) {
-                projectileShooting.weaponData = weapons[weaponIndex];
-            }
-        }
+        int index = (int) (context.ReadValue<float>()-1);
+        projectileShooting.weaponData = weapons[index];
     }
 }

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,26 +15,18 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
 
     private PlayerInputActions playerInputActions;
-    private InputAction movement;
 
     private void Awake() {
         playerInputActions = new PlayerInputActions();
     }
 
     private void OnEnable() {
-        movement = playerInputActions.Player.Movement;
-        movement.Enable();
-
-        playerInputActions.Player.Shoot.performed += DoJump;
-        playerInputActions.Player.Shoot.Enable();
-
-        playerInputActions.Player.Run.Enable();
+        playerInputActions.Player.Shoot.performed += Shoot;
+        playerInputActions.Player.Enable();
     }
 
     private void OnDisable() {
-        movement.Disable();
-        playerInputActions.Player.Shoot.Disable();
-        playerInputActions.Player.Run.Disable();
+        playerInputActions.Player.Disable();
     }
 
     void Start()
@@ -47,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Vector2 movementValue = movement.ReadValue<Vector2>();
+        Vector2 movementValue = playerInputActions.Player.Movement.ReadValue<Vector2>();
         Vector3 input = new Vector3(movementValue.x, 0, movementValue.y);
 
         if (input != Vector3.zero) {
@@ -55,16 +44,15 @@ public class PlayerController : MonoBehaviour
             transform.eulerAngles = Vector3.up * Mathf.MoveTowardsAngle(transform.eulerAngles.y, targetRotation.eulerAngles.y, rotationSpeed * Time.deltaTime);
         }
 
-        Vector3 motion = input;
+        Vector3 motion = input.normalized;
 
-        motion *= (Mathf.Abs(input.x) == 1 && Mathf.Abs(input.z) == 1) ? .7f : 1;
         motion *= playerInputActions.Player.Run.IsPressed()?runSpeed:walkSpeed;
         motion += Vector3.up * -8;
 
         controller.Move(motion * Time.deltaTime);
     }
 
-     private void DoJump(InputAction.CallbackContext context)
+     private void Shoot(InputAction.CallbackContext context)
     {
         shooter.Shoot();
     }
