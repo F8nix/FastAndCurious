@@ -59,7 +59,7 @@
     <UnityVersion>2022.3.3f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="/home/f8nix/.vscode/extensions/visualstudiotoolsforunity.vstuc-0.9.3/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/home/f8nix/.vscode/extensions/visualstudiotoolsforunity.vstuc-0.9.4/Analyzers/Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="/home/f8nix/Unity/Hub/Editor/2022.3.3f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/home/f8nix/Unity/Hub/Editor/2022.3.3f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
@@ -76,6 +76,7 @@
     <Compile Include="Assets/Scripts/UI/ExitGame.cs" />
     <Compile Include="Assets/Scripts/managers/PassiveMoneyCounter.cs" />
     <Compile Include="Assets/Scripts/LookupTargetting.cs" />
+    <Compile Include="Assets/Scripts/UI/mainMenu/ButtonInitializer.cs" />
     <Compile Include="Assets/Scripts/util/EventableType.cs" />
     <Compile Include="Assets/Scripts/bullet/ProjectileShooting.cs" />
     <Compile Include="Assets/Scripts/CamOntoTrigger.cs" />
@@ -85,9 +86,11 @@
     <Compile Include="Assets/SO/PlayerWeapon/WeaponData.cs" />
     <Compile Include="Assets/Scripts/managers/EndCounter.cs" />
     <Compile Include="Assets/Scripts/player/WeaponChange.cs" />
+    <Compile Include="Assets/Scripts/UI/mainMenu/ShopInitializing.cs" />
     <Compile Include="Assets/Scripts/HealthComponent.cs" />
     <Compile Include="Assets/Scripts/player/PlayerController.cs" />
     <Compile Include="Assets/Scripts/managers/MoneyManager.cs" />
+    <Compile Include="Assets/SO/Upgrades/UpgradeData.cs" />
     <Compile Include="Assets/Scripts/managers/UpgradeManager.cs" />
     <Compile Include="Assets/Scripts/UI/mainMenu/RadioButtonSystem.cs" />
     <Compile Include="Assets/Scripts/enemy/TeleportOnNoHp.cs" />
