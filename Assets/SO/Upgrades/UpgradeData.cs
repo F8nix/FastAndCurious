@@ -4,5 +4,6 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "UpgradeData", menuName = "SO/UpgradeData", order = 1)]
 public class UpgradeData : ScriptableObject {
-    public string upgradeName;
+    public string abilityName;
+    public int cost;
 }

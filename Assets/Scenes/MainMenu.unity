@@ -1435,12 +1435,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905578599}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.009031415, y: -2.363608, z: -3.0143127}
+  m_LocalPosition: {x: -0.9243197, y: 7.589831, z: -4.176625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1006279973}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &905578601
 MonoBehaviour:
@@ -1487,9 +1487,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1532031859}
-  - {fileID: 905578600}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1016645777
 GameObject:
@@ -2228,6 +2227,10 @@ PrefabInstance:
     - target: {fileID: 2572406305181620518, guid: 0661d661a7c7c086a9ca5d1306469c90, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416090035070095275, guid: 0661d661a7c7c086a9ca5d1306469c90, type: 3}
+      propertyPath: debugMoney
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4416090035070095275, guid: 0661d661a7c7c086a9ca5d1306469c90, type: 3}
       propertyPath: moneyCounter

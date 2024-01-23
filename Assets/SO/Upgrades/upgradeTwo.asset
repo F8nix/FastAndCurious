@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468cd44da4cf587d6a079ae5b32222bd, type: 3}
   m_Name: upgradeTwo
   m_EditorClassIdentifier: 
-  upgradeName: fuzzy
+  abilityName: fuzzy
+  cost: 100

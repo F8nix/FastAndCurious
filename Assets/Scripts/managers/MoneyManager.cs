@@ -40,4 +40,15 @@ public class MoneyManager : MonoBehaviour
     private void Update() {
         moneyCounter.text = $"$$$: {money}";
     }
+
+    #if UNITY_EDITOR
+    [Header("Debug moeny")]
+    [SerializeField] private int debugMoney;
+
+    [ContextMenu("Invoke AddDebugMoneyDiff")]
+
+    private void InvokeOnHealthChangedEditor() {
+        money += debugMoney;
+    }
+#endif
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -5,8 +6,8 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
-    public List<ScriptableObject> availableUpgrades;
-    public HashSet<ScriptableObject> boughtUpgrades;
+    public List<UpgradeData> availableUpgrades;
+    public HashSet<UpgradeData> boughtUpgrades;
     public static UpgradeManager Instance {get; private set; }
 
     private void Awake() {
@@ -15,16 +16,23 @@ public class UpgradeManager : MonoBehaviour
         } else {
             Instance = this;
         }
+        boughtUpgrades = new HashSet<UpgradeData>();
     }
 
     private void Start() {
         DontDestroyOnLoad(this);
     }
 
-    public void BuyUpgrade(ScriptableObject upgrade) {
-        if(!boughtUpgrades.Contains(upgrade)){ // && currency > upgrade.cost czy cos
-        //chwilowo nie sprawdzamy kosztu ale potem bedzie trzeba
+    public void BuyUpgrade(UpgradeData upgrade) {
+        if(!boughtUpgrades.Contains(upgrade) && MoneyManager.Instance.money > upgrade.cost){
+        MoneyManager.Instance.money -= upgrade.cost;
         boughtUpgrades.Add(upgrade);
+        }
+        int entries = 1;
+        foreach (var entry in boughtUpgrades)
+        { 
+            Console.WriteLine("Entries "+entries);
+            entries++;
         }
     }
 

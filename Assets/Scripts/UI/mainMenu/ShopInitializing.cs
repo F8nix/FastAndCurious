@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using System;
 
 public class ShopInitializing : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class ShopInitializing : MonoBehaviour
         {
             var button = Instantiate(buttonPrefab, gridTransform);
             var initScript = button.GetComponent<ButtonInitializer>();
-            initScript.SetName(upgrade.name);
+            initScript.SetName(upgrade);
+            initScript.onButtonClick += UpgradeManager.Instance.BuyUpgrade;
         }
     }
 
