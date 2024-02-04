@@ -36,7 +36,7 @@ public class IndicatorAppearence : MonoBehaviour
         
         if (isColliding != collidersCount > 0) {
             isColliding = collidersCount > 0;
-            foreach (var (renderer, originalColor) in indicatorRenderers) {
+            foreach (var (renderer, originalColor) in indicatorRenderers) { // not set to an instance of an object
                 renderer.material.color = originalColor/2 + (isColliding ? invalidColor : validColor)/2;
             }
         }

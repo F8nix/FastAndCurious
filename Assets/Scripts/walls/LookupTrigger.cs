@@ -14,14 +14,14 @@ public class LookupTrigger : MonoBehaviour
     private void OnTriggerStay(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
             camOntoTriggerInstance.LookAtTarget(this.transform);
+            seeThroughWall.SetTransparent();
         }
-        seeThroughWall.SetTransparent();
     }
 
     private void OnTriggerExit(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
             camOntoTriggerInstance.LookAtTarget(centerLookup);
+            seeThroughWall.SetNormal();
         }
-        seeThroughWall.SetNormal();
     }
 }
