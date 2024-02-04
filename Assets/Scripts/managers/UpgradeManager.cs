@@ -31,7 +31,7 @@ public class UpgradeManager : MonoBehaviour
         int entries = 1;
         foreach (var entry in boughtUpgrades)
         { 
-            Console.WriteLine("Entries "+entries);
+            Debug.Log("Entries "+entries);
             entries++;
         }
     }

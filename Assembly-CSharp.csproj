@@ -71,11 +71,12 @@
     <Compile Include="Assets/Scripts/player/PlayerBuilder.cs" />
     <Compile Include="Assets/Scripts/UI/LookAtCamera.cs" />
     <Compile Include="Assets/Scripts/bullet/BulletCollision.cs" />
+    <Compile Include="Assets/Scripts/LookupTrigger.cs" />
     <Compile Include="Assets/Scripts/HierarchyManip.cs" />
     <Compile Include="Assets/Scripts/enemy/DestroyOnNoHp.cs" />
     <Compile Include="Assets/Scripts/UI/ExitGame.cs" />
     <Compile Include="Assets/Scripts/managers/PassiveMoneyCounter.cs" />
-    <Compile Include="Assets/Scripts/LookupTargetting.cs" />
+    <Compile Include="Assets/Scripts/walls/SeeThrough.cs" />
     <Compile Include="Assets/Scripts/UI/mainMenu/ButtonInitializer.cs" />
     <Compile Include="Assets/Scripts/util/EventableType.cs" />
     <Compile Include="Assets/Scripts/bullet/ProjectileShooting.cs" />
