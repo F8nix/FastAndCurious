@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 8661590137672629892}
   - component: {fileID: 1680313493737375489}
   - component: {fileID: 7589718081337426729}
+  - component: {fileID: 4044569493440741444}
   m_Layer: 0
-  m_Name: cameraTriggerPositionCamera
+  m_Name: cameraTriggerCenterSwap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8661590137672629892
 MeshFilter:
@@ -97,7 +98,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camOntoTriggerInstance: {fileID: 0}
-  targetPos: {fileID: 0}
-  camera_move_enabled: 0
   triggerObject: {fileID: 0}
-  speed: 2
+--- !u!114 &4044569493440741444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7799093640136172754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80bf32e0cf3b997ba9ff72246ee00f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggerEnter:
+    m_PersistentCalls:
+      m_Calls: []
