@@ -32,21 +32,24 @@ public class CellManager : MonoBehaviour
     private void Start()
     {
         onEnterTrigger = GetComponentInChildren<ColliderListener>();
-        onEnterTrigger.onTriggerEnter.AddListener(OnTriggerEnter); //czemu dziala dwa razy?
     }
 
     private void OnEnable()
     {
-        toDeactivation = 2;
-        cellsStatusManager.onPlayerEnterNewCell.AddListener(OnPlayerEnterNewCell);
-
-        //zasubskrybować do ewentu zmieniajacego toDeactivation
+    toDeactivation = 2;
+    cellsStatusManager.onPlayerEnterNewCell.AddListener(OnPlayerEnterNewCell);
+        if (onEnterTrigger == null){
+            onEnterTrigger = GetComponentInChildren<ColliderListener>();
+        }
+        onEnterTrigger.onTriggerEnter.AddListener(OnTriggerEnter);
     }
 
     private void OnDisable()
     {
         cellsStatusManager.onPlayerEnterNewCell.RemoveListener(OnPlayerEnterNewCell);
-        //odsubskrybować od ewentu zmieniajacego toDeactivation
+        if(id!=-1){
+        onEnterTrigger.onTriggerEnter.RemoveListener(OnTriggerEnter);
+        }
     }
 
     // Update is called once per frame
@@ -119,10 +122,10 @@ public class CellManager : MonoBehaviour
         if(!other.CompareTag("Player")){
             return;
         }
-        Debug.Log("on trig ent");
+        //Debug.Log("on trig ent");
+        cellsStatusManager.onPlayerEnterNewCell.Invoke(this);
         PositionNearbyCells();
         onEnterTrigger.onTriggerEnter.RemoveListener(OnTriggerEnter);
-        cellsStatusManager.onPlayerEnterNewCell.Invoke(this);
     }
 
     private void OnPlayerEnterNewCell(CellManager cellManager) {
@@ -130,11 +133,6 @@ public class CellManager : MonoBehaviour
             return;
         }
         toDeactivation--;
-        if (toDeactivation < 0)
-        {
-            cellsStatusManager.GetCell(id).cell.SetActive(false);
-            cell.SetActive(false);
-        }
         if(nextCells != null) {
             for (int i = 0; i < nextCells.Count; i++)
             {
@@ -146,6 +144,11 @@ public class CellManager : MonoBehaviour
                     i--;
                 }
             }
+            nextCells = null;
+        }
+        if (toDeactivation <= 0)
+        {
+            cell.SetActive(false);
         }
     }
 }
