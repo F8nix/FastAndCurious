@@ -6,4 +6,7 @@ using UnityEngine;
 public class UpgradeData : ScriptableObject {
     public string abilityName;
     public int cost;
+
+    public bool isLocking;
+    public UpgradeData unlockingUpgrade;
 }

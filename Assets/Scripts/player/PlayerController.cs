@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 8;
 
     private bool speedUpActive;
+
     public float speedUpDuration = 5.0f;
     public float speedUpCooldown = 20.0f;
 

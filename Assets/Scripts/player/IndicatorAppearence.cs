@@ -7,8 +7,8 @@ using UnityEngine.InputSystem.Interactions;
 
 public class IndicatorAppearence : MonoBehaviour
 {
-    private Collider[] colliders = new Collider[3];
-    private bool isColliding;
+    public Collider[] colliders = new Collider[3];
+    public bool isColliding = true;
     public float radius = 0.25f;
     public Color invalidColor = new Color(0.1f,0,0);
     public Color validColor = new Color(0,0.1f,0);
@@ -32,6 +32,9 @@ public class IndicatorAppearence : MonoBehaviour
     }
 
     private void GraphicsUpdate() {
+        if(currentDisplay == null){
+            return;
+        }
         int collidersCount = Physics.OverlapSphereNonAlloc(transform.position + Vector3.up * radius, radius, colliders, indicatorCollision);
         
         if (isColliding != collidersCount > 0) {
@@ -43,6 +46,10 @@ public class IndicatorAppearence : MonoBehaviour
     }
 
     public void SetAppearence(GameObject prefab) {
+        if(prefab == null){
+            Destroy(currentDisplay);
+            return;
+        }
         if(currentDisplay != null){
             Destroy(currentDisplay);
         }

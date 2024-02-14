@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 468cd44da4cf587d6a079ae5b32222bd, type: 3}
-  m_Name: upgradeFour
+  m_Name: buildUpgrade
   m_EditorClassIdentifier: 
-  abilityName: moreBuildingCharges
-  cost: 66
+  abilityName: Building
+  cost: 75
+  isLocking: 1
+  unlockingUpgrade: {fileID: 0}

@@ -74,6 +74,7 @@
     <Compile Include="Assets/Scripts/HierarchyManip.cs" />
     <Compile Include="Assets/Scripts/enemy/DestroyOnNoHp.cs" />
     <Compile Include="Assets/Scripts/UI/ExitGame.cs" />
+    <Compile Include="Assets/Scripts/EnergyComponent.cs" />
     <Compile Include="Assets/Scripts/walls/CameraPosChange.cs" />
     <Compile Include="Assets/Scripts/managers/PassiveMoneyCounter.cs" />
     <Compile Include="Assets/Scripts/walls/SeeThrough.cs" />
@@ -85,13 +86,13 @@
     <Compile Include="Assets/Scripts/managers/LoadShop.cs" />
     <Compile Include="Assets/Scripts/player/IndicatorAppearence.cs" />
     <Compile Include="Assets/Scripts/DamageOnTrigger.cs" />
+    <Compile Include="Assets/Scripts/managers/ShopInitializing.cs" />
     <Compile Include="Assets/SO/PlayerWeapon/WeaponData.cs" />
     <Compile Include="Assets/Scripts/player/CameraSwapController.cs" />
     <Compile Include="Assets/Scripts/upgAndMoney/UpgradeManager.cs" />
     <Compile Include="Assets/Scripts/managers/EndCounter.cs" />
     <Compile Include="Assets/Scripts/player/WeaponChange.cs" />
     <Compile Include="Assets/Scripts/walls/ColliderListener.cs" />
-    <Compile Include="Assets/Scripts/UI/mainMenu/ShopInitializing.cs" />
     <Compile Include="Assets/Scripts/HealthComponent.cs" />
     <Compile Include="Assets/Scripts/player/PlayerController.cs" />
     <Compile Include="Assets/Scripts/managers/MoneyManager.cs" />

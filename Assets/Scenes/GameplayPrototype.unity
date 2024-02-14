@@ -1742,6 +1742,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c50677f0e664916dfb8d7a20507c193c, type: 2}
   - {fileID: 11400000, guid: 699f7327d36b0eea0a42930b6027c876, type: 2}
   - {fileID: 11400000, guid: 3b2b2e9057286468083699dde1a677d7, type: 2}
+  unlockableUpgrades:
+  - {fileID: 11400000, guid: 5b1059dfa59b6801dbd8d044374e4678, type: 2}
 --- !u!1001 &170721509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6941,8 +6943,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553625180}
-  m_LocalRotation: {x: 0.70090926, y: 0.000000012060115, z: 0.000000012272466, w: 0.71325046}
-  m_LocalPosition: {x: 0, y: 10.528478, z: -0.17452419}
+  m_LocalRotation: {x: 0.7071068, y: 5.9958337e-15, z: 5.995835e-15, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 14.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7309,7 +7311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569385768}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.495, z: 1.9990001}
+  m_LocalPosition: {x: 0, y: -1, z: 1.9990001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7378,7 +7380,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2023b6adf15ed569ba61a9cab9b7e90d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.25
+  colliders:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  isColliding: 1
+  radius: 1
   invalidColor: {r: 1, g: 0.4745285, b: 0.4745285, a: 0.49803922}
   validColor: {r: 0.4349059, g: 1, b: 0.4349059, a: 0.5}
   indicatorMaterial: {fileID: 0}
@@ -13523,8 +13530,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.70090926, y: 0.000000012060115, z: 0.000000012272466, w: 0.71325046}
-  m_LocalPosition: {x: 0, y: 10.528478, z: -0.17452419}
+  m_LocalRotation: {x: 0.7071068, y: 5.9958337e-15, z: 5.995835e-15, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 14.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19284,7 +19291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -422, y: -224}
+  m_AnchoredPosition: {x: -422, y: -157}
   m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264763863
@@ -29135,6 +29142,8 @@ MonoBehaviour:
   - {fileID: 5749290052911813107, guid: b73b7d6eaee658426b57f51f28ddfb8f, type: 3}
   - {fileID: 5749290052911813107, guid: bb1aa6865c0464464bb87377e973e418, type: 3}
   buildingIndex: 0
+  buildUpgrade: {fileID: 11400000, guid: 3b2b2e9057286468083699dde1a677d7, type: 2}
+  buildEnergyUpgrade: {fileID: 0}
 --- !u!1001 &1811222688
 PrefabInstance:
   m_ObjectHideFlags: 0

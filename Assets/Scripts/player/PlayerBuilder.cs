@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,6 +12,12 @@ public class PlayerBuilder : MonoBehaviour
     public PlayerInputActions playerInputActions;
     public GameObject[] buildings;
     public int buildingIndex = 0;
+    public UpgradeData buildUpgrade;
+    public UpgradeData buildEnergyUpgrade;
+
+    private bool energyUpgraded = true;
+
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -18,15 +25,29 @@ public class PlayerBuilder : MonoBehaviour
     }
 
     private void Start() {
-        indicatorAppearence.SetAppearence(buildings[0]);
+        if(UpgradeManager.Instance.boughtUpgrades.Contains(buildUpgrade)) {
+            indicatorAppearence.SetAppearence(buildings[0]);
+        } else {
+            indicatorAppearence.SetAppearence(null);
+        }
+        if(UpgradeManager.Instance.boughtUpgrades.Contains(buildEnergyUpgrade)) {
+            energyUpgraded = false;
+            if(!energyUpgraded){
+                this.GetComponent<EnergyComponent>().maxEnergy.Value += 3;
+                energyUpgraded = true;
+                return;
+            }
+        }
     }
 
     private void OnEnable()
     {
         playerInputActions.Player.Enable();
+        if(UpgradeManager.Instance.boughtUpgrades.Contains(buildUpgrade)) {
         playerInputActions.Player.ChangeBuidling.performed += ChangeBuilding;
         playerInputActions.Player.RotateIndicator.performed += RotateIndicator;
         playerInputActions.Player.Build.performed += Build;
+        }
     }
     private void OnDisable()
     {
@@ -52,7 +73,13 @@ public class PlayerBuilder : MonoBehaviour
     }
     private void Build(InputAction.CallbackContext context)
     {
-        Quaternion buildingRotation = Quaternion.Euler(indicator.position);
-        Instantiate(buildings[buildingIndex], indicator.position, buildingRotation);
+        if(UpgradeManager.Instance.boughtUpgrades.Contains(buildUpgrade)) {
+            
+            if(indicatorAppearence.isColliding){
+                return;
+            }
+            Quaternion buildingRotation = Quaternion.Euler(indicator.position);
+            Instantiate(buildings[buildingIndex], indicator.position + Vector3.up * 0.6f, buildingRotation);
+        }
     }
 }

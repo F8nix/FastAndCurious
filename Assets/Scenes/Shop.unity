@@ -182,10 +182,10 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 50}
+  m_CellSize: {x: 300, y: 75}
   m_Spacing: {x: 5, y: 5}
   m_Constraint: 2
-  m_ConstraintCount: 3
+  m_ConstraintCount: 2
 --- !u!114 &110391831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -855,6 +855,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c50677f0e664916dfb8d7a20507c193c, type: 2}
   - {fileID: 11400000, guid: 699f7327d36b0eea0a42930b6027c876, type: 2}
   - {fileID: 11400000, guid: 3b2b2e9057286468083699dde1a677d7, type: 2}
+  unlockableUpgrades:
+  - {fileID: 11400000, guid: 5b1059dfa59b6801dbd8d044374e4678, type: 2}
+  onUpgradesChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1206368814
 GameObject:
   m_ObjectHideFlags: 0
