@@ -1,12 +1,21 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
     // Handing
     public float rotationSpeed = 450;
+
+    private float movementSpeed = 5;
     public float walkSpeed = 5;
     public float runSpeed = 8;
+
+    private bool speedUpActive;
+    public float speedUpDuration = 5.0f;
+    public float speedUpCooldown = 20.0f;
 
     public ProjectileShooting shooter;
 
@@ -16,12 +25,17 @@ public class PlayerController : MonoBehaviour
 
     private PlayerInputActions playerInputActions;
 
+    public UpgradeData speedUpUpgrade;
+
     private void Awake() {
         playerInputActions = new PlayerInputActions();
     }
 
     private void OnEnable() {
         playerInputActions.Player.Shoot.performed += Shoot;
+        if(UpgradeManager.Instance.boughtUpgrades.Contains(speedUpUpgrade)) {
+        playerInputActions.Player.Run.performed += OnSpeedUpKeyPress;
+        }
         playerInputActions.Player.Enable();
     }
 
@@ -46,7 +60,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 motion = input.normalized;
 
-        motion *= playerInputActions.Player.Run.IsPressed()?runSpeed:walkSpeed;
+        motion *= movementSpeed;
         motion += Vector3.up * -8;
 
         controller.Move(motion * Time.deltaTime);
@@ -55,5 +69,23 @@ public class PlayerController : MonoBehaviour
      private void Shoot(InputAction.CallbackContext context)
     {
         shooter.Shoot();
+    }
+
+    private void OnSpeedUpKeyPress(InputAction.CallbackContext context) {
+        StartCoroutine(TryActivateSpeedUp());
+    }
+
+    IEnumerator TryActivateSpeedUp()
+    {
+        if(UpgradeManager.Instance.boughtUpgrades.Contains(speedUpUpgrade)) {
+            if(!speedUpActive){
+                movementSpeed = runSpeed;
+                speedUpActive = true;
+                yield return new WaitForSeconds(speedUpDuration);
+                movementSpeed = walkSpeed;
+                yield return new WaitForSeconds(speedUpCooldown);
+                speedUpActive = false;
+            }
+        }
     }
 }

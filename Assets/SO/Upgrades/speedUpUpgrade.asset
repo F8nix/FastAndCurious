@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 468cd44da4cf587d6a079ae5b32222bd, type: 3}
-  m_Name: upgradeOne
+  m_Name: speedUpUpgrade
   m_EditorClassIdentifier: 
-  abilityName: fancy
+  abilityName: Fast Walking
   cost: 50

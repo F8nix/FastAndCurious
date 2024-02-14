@@ -87,6 +87,7 @@
     <Compile Include="Assets/Scripts/DamageOnTrigger.cs" />
     <Compile Include="Assets/SO/PlayerWeapon/WeaponData.cs" />
     <Compile Include="Assets/Scripts/player/CameraSwapController.cs" />
+    <Compile Include="Assets/Scripts/upgAndMoney/UpgradeManager.cs" />
     <Compile Include="Assets/Scripts/managers/EndCounter.cs" />
     <Compile Include="Assets/Scripts/player/WeaponChange.cs" />
     <Compile Include="Assets/Scripts/walls/ColliderListener.cs" />
@@ -97,7 +98,6 @@
     <Compile Include="Assets/Scripts/walls/CellsStatusManager.cs" />
     <Compile Include="Assets/SO/Upgrades/UpgradeData.cs" />
     <Compile Include="Assets/Scripts/walls/CellManager.cs" />
-    <Compile Include="Assets/Scripts/managers/UpgradeManager.cs" />
     <Compile Include="Assets/Scripts/UI/mainMenu/RadioButtonSystem.cs" />
     <Compile Include="Assets/Scripts/enemy/TeleportOnNoHp.cs" />
     <Compile Include="Assets/Scripts/UI/HealthbarUpdate.cs" />
