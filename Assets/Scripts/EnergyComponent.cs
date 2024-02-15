@@ -10,10 +10,10 @@ public class EnergyComponent : MonoBehaviour
     public Action onEnergyDepleted;
 
     private void Start() {
-        energy.OnValueChanged += HealthCap;
+        energy.OnValueChanged += EnergyCap;
     }
 
-    private void HealthCap(float prevValue, float newValue)
+    private void EnergyCap(float prevValue, float newValue)
     {
         if(newValue <= 0) {
             energy.Value = 0;
@@ -34,7 +34,7 @@ public class EnergyComponent : MonoBehaviour
 
     [ContextMenu("Invoke AddDebugEnergyDiff")]
 
-    private void InvokeOnHealthChangedEditor() {
+    private void InvokeOnEnergyChangedEditor() {
         energy.Value += debugEnergyDiff;
     }
 #endif

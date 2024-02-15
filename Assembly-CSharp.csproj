@@ -92,11 +92,13 @@
     <Compile Include="Assets/Scripts/upgAndMoney/UpgradeManager.cs" />
     <Compile Include="Assets/Scripts/managers/EndCounter.cs" />
     <Compile Include="Assets/Scripts/player/WeaponChange.cs" />
+    <Compile Include="Assets/Scripts/enemy/DestructController.cs" />
     <Compile Include="Assets/Scripts/walls/ColliderListener.cs" />
     <Compile Include="Assets/Scripts/HealthComponent.cs" />
     <Compile Include="Assets/Scripts/player/PlayerController.cs" />
     <Compile Include="Assets/Scripts/managers/MoneyManager.cs" />
     <Compile Include="Assets/Scripts/walls/CellsStatusManager.cs" />
+    <Compile Include="Assets/Scripts/enemy/DestructOnNoHp.cs" />
     <Compile Include="Assets/SO/Upgrades/UpgradeData.cs" />
     <Compile Include="Assets/Scripts/walls/CellManager.cs" />
     <Compile Include="Assets/Scripts/UI/mainMenu/RadioButtonSystem.cs" />

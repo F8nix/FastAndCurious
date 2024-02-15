@@ -1,5 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+public enum CellDirection{
+    up,
+    down,
+    right,
+    left
+}
 
 public class CellManager : MonoBehaviour
 {
@@ -14,7 +22,6 @@ public class CellManager : MonoBehaviour
 
 
     public GameObject cell;
-
     public GameObject cellCentre;
     public ColliderListener onEnterTrigger;
 
@@ -22,7 +29,9 @@ public class CellManager : MonoBehaviour
     public int id;
     public int toDeactivation;
 
-    public List<string> connectionsDirections;
+    //public List<string> connectionsDirections;
+
+    public List<DestructController> destructs;
 
     private List<CellManager> nextCells;
 
@@ -32,6 +41,10 @@ public class CellManager : MonoBehaviour
     private void Start()
     {
         onEnterTrigger = GetComponentInChildren<ColliderListener>();
+        foreach (var destruct in destructs)
+        {
+            destruct.onDestroy.AddListener(PutCellIntoDirection);
+        }
     }
 
     private void OnEnable()
@@ -58,17 +71,7 @@ public class CellManager : MonoBehaviour
 
     }
 
-    private void PositionNearbyCells()
-    {
-        nextCells = new();
-        foreach (string direction in connectionsDirections)
-        {
-            var cell = PutCellIntoDirection(direction);
-            nextCells.Add(cell);
-        }
-    }
-
-    public CellManager PutCellIntoDirection(string direction)
+    public void PutCellIntoDirection(CellDirection direction)
     {
         CellManager cell;
         int cellMinId;
@@ -77,25 +80,25 @@ public class CellManager : MonoBehaviour
 
         switch (direction)
         {
-            case "up":
+            case CellDirection.up:
                 cellMinId = cellDownMinId;
                 cellMaxId = cellDownMaxId;
                 cellDirection = Vector3.forward;
                 break;
 
-            case "down":
+            case CellDirection.down:
                 cellMinId = cellUpMinId;
                 cellMaxId = cellUpMaxId;
                 cellDirection = Vector3.back;
                 break;
             
-            case "right":
+            case CellDirection.right:
                 cellMinId = cellLeftMinId;
                 cellMaxId = cellLeftMaxId;
                 cellDirection = Vector3.right;
                 break;
 
-            case "left":
+            case CellDirection.left:
                 cellMinId = cellRightMinId;
                 cellMaxId = cellRightMaxId;
                 cellDirection = Vector3.left;
@@ -103,11 +106,10 @@ public class CellManager : MonoBehaviour
 
             default:
                 Debug.Log("directionless room or direction choosing error");
-                return null;
+                return;
         }
         cell = cellsStatusManager.GetRandomCell(cellMinId, cellMaxId);
         ActivateAndMoveCell(cell.cell, cellDirection);
-        return cell;
     }
 
     public void ActivateAndMoveCell(GameObject cell, Vector3 direction)
@@ -124,7 +126,6 @@ public class CellManager : MonoBehaviour
         }
         //Debug.Log("on trig ent");
         cellsStatusManager.onPlayerEnterNewCell.Invoke(this);
-        PositionNearbyCells();
         onEnterTrigger.onTriggerEnter.RemoveListener(OnTriggerEnter);
     }
 
@@ -150,5 +151,10 @@ public class CellManager : MonoBehaviour
         {
             cell.SetActive(false);
         }
+    }
+
+    private int ActivateAndSetDestruct(DestructController destruct) {
+        destruct.gameObject.SetActive(true);
+        return 0;
     }
 }
