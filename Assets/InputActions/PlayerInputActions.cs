@@ -89,6 +89,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""JoinAction"",
+                    ""type"": ""Button"",
+                    ""id"": ""02df3d8e-5a60-4d9d-8e52-6bfa7e87b863"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -149,6 +158,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""412ea30b-d88c-4e1e-9bae-2fb78fe6971a"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""767f3ccd-c680-4248-ba4b-00593a57dfdb"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
@@ -160,8 +180,30 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""5580ae14-b797-4a84-b0d3-ba80c4758b4a"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""35efb018-e127-4aea-9c05-0258c55d47bb"",
                     ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1bc00d35-9cad-4df1-825f-575f5a348690"",
+                    ""path"": ""<Gamepad>/leftStickPress"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -204,10 +246,54 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""c9cd213b-3397-4bbb-8707-58c9741abb0c"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale"",
+                    ""groups"": """",
+                    ""action"": ""ChangeWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ed7245cf-81d4-42cb-bc6b-2a1beff15527"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale(factor=2)"",
+                    ""groups"": """",
+                    ""action"": ""ChangeWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c93936c7-1d7f-4092-8bb3-b78a94ef16f8"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale(factor=3)"",
+                    ""groups"": """",
+                    ""action"": ""ChangeWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""c51658f4-1060-4994-ad14-de0caf041a5b"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": ""Scale(factor=5)"",
+                    ""groups"": """",
+                    ""action"": ""Build"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c745726e-e3b2-4b23-8842-73a0107c32c6"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Build"",
                     ""isComposite"": false,
@@ -237,6 +323,28 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""83c074cd-5623-4acf-bd5d-e6dc93efe9a0"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeBuidling"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4c18c6c9-b853-42ab-be7d-57409a08e9bb"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeBuidling"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""afbc6787-34a3-4dd4-8baa-80dffc4bac86"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
@@ -256,6 +364,50 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""RotateIndicator"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a3e7c7ab-c749-4930-8191-1ae41cb6bd98"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RotateIndicator"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5e959f18-1cfd-405c-b467-fd9deefd72b5"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RotateIndicator"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8ff508cb-1252-4711-98c9-48358a22312b"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JoinAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""323900bb-3fd1-4876-b250-c74d5ef01856"",
+                    ""path"": ""<Keyboard>/anyKey"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JoinAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -271,6 +423,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Build = m_Player.FindAction("Build", throwIfNotFound: true);
         m_Player_ChangeBuidling = m_Player.FindAction("ChangeBuidling", throwIfNotFound: true);
         m_Player_RotateIndicator = m_Player.FindAction("RotateIndicator", throwIfNotFound: true);
+        m_Player_JoinAction = m_Player.FindAction("JoinAction", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -339,6 +492,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Build;
     private readonly InputAction m_Player_ChangeBuidling;
     private readonly InputAction m_Player_RotateIndicator;
+    private readonly InputAction m_Player_JoinAction;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -350,6 +504,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Build => m_Wrapper.m_Player_Build;
         public InputAction @ChangeBuidling => m_Wrapper.m_Player_ChangeBuidling;
         public InputAction @RotateIndicator => m_Wrapper.m_Player_RotateIndicator;
+        public InputAction @JoinAction => m_Wrapper.m_Player_JoinAction;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -380,6 +535,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @RotateIndicator.started += instance.OnRotateIndicator;
             @RotateIndicator.performed += instance.OnRotateIndicator;
             @RotateIndicator.canceled += instance.OnRotateIndicator;
+            @JoinAction.started += instance.OnJoinAction;
+            @JoinAction.performed += instance.OnJoinAction;
+            @JoinAction.canceled += instance.OnJoinAction;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -405,6 +563,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @RotateIndicator.started -= instance.OnRotateIndicator;
             @RotateIndicator.performed -= instance.OnRotateIndicator;
             @RotateIndicator.canceled -= instance.OnRotateIndicator;
+            @JoinAction.started -= instance.OnJoinAction;
+            @JoinAction.performed -= instance.OnJoinAction;
+            @JoinAction.canceled -= instance.OnJoinAction;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -431,5 +592,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnBuild(InputAction.CallbackContext context);
         void OnChangeBuidling(InputAction.CallbackContext context);
         void OnRotateIndicator(InputAction.CallbackContext context);
+        void OnJoinAction(InputAction.CallbackContext context);
     }
 }
