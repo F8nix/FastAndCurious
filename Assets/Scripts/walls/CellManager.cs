@@ -24,10 +24,14 @@ public class CellManager : MonoBehaviour
     public GameObject cell;
     public GameObject cellCentre;
     public ColliderListener onEnterTrigger;
+    public EndCounter endCounterInstance;
 
 
     public int id;
     public int toDeactivation;
+    public int money;
+
+    public float toxicity;
 
     //public List<string> connectionsDirections;
 
@@ -77,14 +81,14 @@ public class CellManager : MonoBehaviour
 
     }
 
-    public void PutCellIntoDirection(CellDirection direction)
+    public void PutCellIntoDirection(CellData data)
     {
         CellManager cell;
         int cellMinId;
         int cellMaxId;
         Vector3 cellDirection;
 
-        switch (direction)
+        switch (data.direction)
         {
             case CellDirection.up:
                 cellMinId = cellDownMinId;
@@ -116,6 +120,8 @@ public class CellManager : MonoBehaviour
         }
         cell = cellsStatusManager.GetRandomCell(cellMinId, cellMaxId);
         ActivateAndMoveCell(cell.cell, cellDirection);
+        cell.money = data.money;
+        cell.toxicity = data.toxicity;
     }
 
     public void ActivateAndMoveCell(GameObject cell, Vector3 direction)
@@ -133,6 +139,9 @@ public class CellManager : MonoBehaviour
         //Debug.Log("on trig ent");
         cellsStatusManager.onPlayerEnterNewCell.Invoke(this);
         onEnterTrigger.onTriggerEnter.RemoveListener(OnTriggerEnter);
+        MoneyManager.Instance.money += money;
+        endCounterInstance.endTimeValue += toxicity;
+        endCounterInstance.cellsCleared++;
     }
 
     private void OnPlayerEnterNewCell(CellManager cellManager) {

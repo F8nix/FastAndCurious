@@ -16,7 +16,7 @@ public class DestructController : MonoBehaviour
 
     public CellDirection direction;
 
-    public UnityEvent<CellDirection> onDestroy;
+    public UnityEvent<CellData> onDestroy;
 
     public GameObject cameraTriggerLookup;
     
@@ -34,19 +34,19 @@ public class DestructController : MonoBehaviour
             case 0:
                 healthComponent.maxHealth.Value = 5; //poprawic energy componenta
                 healthComponent.health.Value = 5;
-                toxicityDelay = 5.0f;
+                toxicityDelay = 4.0f;
                 moneyGain = 5;
                 break;
             case 1:
                 healthComponent.maxHealth.Value = 3;
                 healthComponent.health.Value = 3;
-                toxicityDelay = 3.0f;
+                toxicityDelay = 2.5f;
                 moneyGain = 4;
                 break;
             case 2:
                 healthComponent.maxHealth.Value = 2;
                 healthComponent.health.Value = 2;
-                toxicityDelay = 3.0f;
+                toxicityDelay = 2.0f;
                 moneyGain = 3;
                 break;
         }
@@ -60,6 +60,13 @@ public class DestructController : MonoBehaviour
         cameraTriggerLookup.SetActive(true);
         healthComponent.health.Value = healthComponent.maxHealth.Value;
         this.gameObject.SetActive(false);
-        onDestroy?.Invoke(direction);
+        onDestroy?.Invoke(new CellData{money = moneyGain, direction = direction, toxicity = toxicityDelay});
     }
+}
+
+public class CellData{
+    public int money;
+    public CellDirection direction;
+
+    public float toxicity;
 }

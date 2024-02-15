@@ -2608,8 +2608,11 @@ MonoBehaviour:
   cell: {fileID: 255098956}
   cellCentre: {fileID: 799807886}
   onEnterTrigger: {fileID: 1232683174}
+  endCounterInstance: {fileID: 1446419159}
   id: 15
   toDeactivation: 0
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!850595691 &259146813
 LightingSettings:
@@ -5213,8 +5216,11 @@ MonoBehaviour:
   cell: {fileID: 403798685}
   cellCentre: {fileID: 1005236084}
   onEnterTrigger: {fileID: 1361898761}
+  endCounterInstance: {fileID: 1446419159}
   id: 6
   toDeactivation: 0
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1 &409317264
 GameObject:
@@ -6606,8 +6612,11 @@ MonoBehaviour:
   cell: {fileID: 488180015}
   cellCentre: {fileID: 1433964079}
   onEnterTrigger: {fileID: 1370446376}
+  endCounterInstance: {fileID: 1446419159}
   id: 2
   toDeactivation: 0
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1 &498154555
 GameObject:
@@ -7928,8 +7937,11 @@ MonoBehaviour:
   cell: {fileID: 601715661}
   cellCentre: {fileID: 1126222094}
   onEnterTrigger: {fileID: 379041815}
+  endCounterInstance: {fileID: 1446419159}
   id: 14
   toDeactivation: 0
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1 &611939811
 GameObject:
@@ -8091,8 +8103,11 @@ MonoBehaviour:
   cell: {fileID: 612716283}
   cellCentre: {fileID: 687175017}
   onEnterTrigger: {fileID: 789604270}
+  endCounterInstance: {fileID: 1446419159}
   id: 9
   toDeactivation: 0
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1 &620107645
 GameObject:
@@ -8456,8 +8471,11 @@ MonoBehaviour:
   cell: {fileID: 655577571}
   cellCentre: {fileID: 8361655416356250382}
   onEnterTrigger: {fileID: 8234939053269429987}
+  endCounterInstance: {fileID: 1446419159}
   id: 12
   toDeactivation: 0
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1 &667492860
 GameObject:
@@ -9134,8 +9152,11 @@ MonoBehaviour:
   cell: {fileID: 689828175}
   cellCentre: {fileID: 1237120071}
   onEnterTrigger: {fileID: 0}
+  endCounterInstance: {fileID: 1446419159}
   id: 13
   toDeactivation: 0
+  money: 3
+  toxicity: 5
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1001 &689970204
 PrefabInstance:
@@ -10504,8 +10525,11 @@ MonoBehaviour:
   cell: {fileID: 754823715}
   cellCentre: {fileID: 1720164308}
   onEnterTrigger: {fileID: 0}
+  endCounterInstance: {fileID: 1446419159}
   id: 3
   toDeactivation: 0
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1 &758220099
 GameObject:
@@ -15147,8 +15171,11 @@ MonoBehaviour:
   cell: {fileID: 1035698159}
   cellCentre: {fileID: 689970206}
   onEnterTrigger: {fileID: 1569174262}
+  endCounterInstance: {fileID: 1446419159}
   id: 5
   toDeactivation: 0
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1 &1042012621
 GameObject:
@@ -16776,8 +16803,11 @@ MonoBehaviour:
   cell: {fileID: 1127903787}
   cellCentre: {fileID: 1715476851}
   onEnterTrigger: {fileID: 1685954418}
+  endCounterInstance: {fileID: 1446419159}
   id: 7
   toDeactivation: 0
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1 &1130495856
 GameObject:
@@ -21713,8 +21743,11 @@ MonoBehaviour:
   cell: {fileID: 1401392093}
   cellCentre: {fileID: 464024501}
   onEnterTrigger: {fileID: 826269858}
+  endCounterInstance: {fileID: 1446419159}
   id: 11
   toDeactivation: 0
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1001 &1407710879
 PrefabInstance:
@@ -22180,8 +22213,11 @@ MonoBehaviour:
   cell: {fileID: 1422338963}
   cellCentre: {fileID: 239575424}
   onEnterTrigger: {fileID: 426090947}
+  endCounterInstance: {fileID: 1446419159}
   id: 10
   toDeactivation: 0
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1 &1430380609
 GameObject:
@@ -23010,12 +23046,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446419157}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 607696d377c6d56e1a815644ee34288d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   endTimeValue: 10
+  cellsCleared: 0
   endCounter: {fileID: 1175357839}
 --- !u!114 &1446419160
 MonoBehaviour:
@@ -30624,7 +30661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1945709826
 Transform:
   m_ObjectHideFlags: 0
@@ -30988,8 +31025,11 @@ MonoBehaviour:
   cell: {fileID: 1978977563}
   cellCentre: {fileID: 982629319}
   onEnterTrigger: {fileID: 1347935555}
+  endCounterInstance: {fileID: 1446419159}
   id: 0
   toDeactivation: 0
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1 &1979972543
 GameObject:
@@ -31298,8 +31338,11 @@ MonoBehaviour:
   cell: {fileID: 1985383094}
   cellCentre: {fileID: 980238195}
   onEnterTrigger: {fileID: 787263388}
+  endCounterInstance: {fileID: 0}
   id: -1
   toDeactivation: 2
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1 &1988725072
 GameObject:
@@ -31864,8 +31907,11 @@ MonoBehaviour:
   cell: {fileID: 2028737238}
   cellCentre: {fileID: 560819503}
   onEnterTrigger: {fileID: 1779661196}
+  endCounterInstance: {fileID: 1446419159}
   id: 4
   toDeactivation: 0
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1001 &2043360545
 PrefabInstance:
@@ -32140,8 +32186,11 @@ MonoBehaviour:
   cell: {fileID: 2052652879}
   cellCentre: {fileID: 1445300138}
   onEnterTrigger: {fileID: 1396034411}
+  endCounterInstance: {fileID: 1446419159}
   id: 1
   toDeactivation: 0
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1 &2067791660
 GameObject:
@@ -33065,7 +33114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2129689240
 Transform:
   m_ObjectHideFlags: 0
@@ -33325,8 +33374,11 @@ MonoBehaviour:
   cell: {fileID: 2131405109}
   cellCentre: {fileID: 1055540825}
   onEnterTrigger: {fileID: 1246538950}
+  endCounterInstance: {fileID: 1446419159}
   id: 8
   toDeactivation: 0
+  money: 0
+  toxicity: 0
   cellsStatusManager: {fileID: 1712524022}
 --- !u!1 &2135148688
 GameObject:
@@ -33634,6 +33686,10 @@ PrefabInstance:
     - target: {fileID: 5749290052911813107, guid: dbbcd10ce72fc145593f167d4b8f8b3a, type: 3}
       propertyPath: m_Name
       value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749290052911813107, guid: dbbcd10ce72fc145593f167d4b8f8b3a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
