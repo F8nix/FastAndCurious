@@ -31,7 +31,7 @@ Transform:
   - {fileID: 4721384588475183083}
   - {fileID: 1696269131359402292}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &466941156571051740
 PrefabInstance:
@@ -120,6 +120,10 @@ PrefabInstance:
       propertyPath: direction
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1022697994888654146, guid: 791adbf4abc07bfd6b797a81c654a5e4, type: 3}
+      propertyPath: cameraTriggerLookup
+      value: 
+      objectReference: {fileID: 7279094578818001089}
     - target: {fileID: 3006276623493519828, guid: 791adbf4abc07bfd6b797a81c654a5e4, type: 3}
       propertyPath: m_Name
       value: destructDown
@@ -172,7 +176,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5395399402582470216, guid: 791adbf4abc07bfd6b797a81c654a5e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

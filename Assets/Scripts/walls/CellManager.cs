@@ -31,7 +31,7 @@ public class CellManager : MonoBehaviour
 
     //public List<string> connectionsDirections;
 
-    public List<DestructController> destructs;
+    private List<DestructController> destructs = new();
 
     private List<CellManager> nextCells;
 
@@ -40,6 +40,7 @@ public class CellManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        destructs = new (GetComponentsInChildren<DestructController>());
         onEnterTrigger = GetComponentInChildren<ColliderListener>();
         foreach (var destruct in destructs)
         {
@@ -49,6 +50,11 @@ public class CellManager : MonoBehaviour
 
     private void OnEnable()
     {
+        foreach (var destruct in destructs)
+        {
+            destruct.gameObject.SetActive(true);
+            destruct.cameraTriggerLookup.SetActive(false);
+        }
     toDeactivation = 2;
     cellsStatusManager.onPlayerEnterNewCell.AddListener(OnPlayerEnterNewCell);
         if (onEnterTrigger == null){
@@ -151,10 +157,5 @@ public class CellManager : MonoBehaviour
         {
             cell.SetActive(false);
         }
-    }
-
-    private int ActivateAndSetDestruct(DestructController destruct) {
-        destruct.gameObject.SetActive(true);
-        return 0;
     }
 }

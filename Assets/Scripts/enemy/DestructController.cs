@@ -17,6 +17,8 @@ public class DestructController : MonoBehaviour
     public CellDirection direction;
 
     public UnityEvent<CellDirection> onDestroy;
+
+    public GameObject cameraTriggerLookup;
     
     private void OnEnable() {
         version = Random.Range(0,3);
@@ -55,6 +57,9 @@ public class DestructController : MonoBehaviour
     }
 
     private void OnDeath() {
+        cameraTriggerLookup.SetActive(true);
+        healthComponent.health.Value = healthComponent.maxHealth.Value;
+        this.gameObject.SetActive(false);
         onDestroy?.Invoke(direction);
     }
 }
