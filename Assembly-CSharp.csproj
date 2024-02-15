@@ -100,9 +100,11 @@
     <Compile Include="Assets/SO/Upgrades/UpgradeData.cs" />
     <Compile Include="Assets/Scripts/walls/CellManager.cs" />
     <Compile Include="Assets/Scripts/UI/mainMenu/RadioButtonSystem.cs" />
+    <Compile Include="Assets/Scripts/managers/ToggleOnPlayerJoin.cs" />
     <Compile Include="Assets/Scripts/enemy/TeleportOnNoHp.cs" />
     <Compile Include="Assets/Scripts/UI/HealthbarUpdate.cs" />
     <Compile Include="Assets/Scripts/enemy/TurretController.cs" />
+    <Compile Include="Assets/Scripts/util/InitializeLayers.cs" />
     <Compile Include="Assets/Scripts/player/PlayerColorSwap.cs" />
   </ItemGroup>
   <ItemGroup>

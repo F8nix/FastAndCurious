@@ -18,6 +18,8 @@ public class CellManager : MonoBehaviour
     public GameObject cellCentre;
     public ColliderListener onEnterTrigger;
 
+    public LayerMask playerLayer;
+
 
     public int id;
     public int toDeactivation;

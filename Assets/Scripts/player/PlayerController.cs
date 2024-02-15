@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
+using UnityEngine.Timeline;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,12 +25,17 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController controller;
 
-    private PlayerInputActions playerInputActions;
-
     public UpgradeData speedUpUpgrade;
 
+    public PlayerInputActions playerInputActions;
+
+    public PlayerInput playerInput;
+
     private void Awake() {
-        playerInputActions = new PlayerInputActions();
+        //playerInputActions = this.GetComponent<PlayerInput>().actions;
+        playerInputActions ??= new PlayerInputActions();
+        playerInput = GetComponent<PlayerInput>();
+        playerInputActions.devices = playerInput.devices;
     }
 
     private void OnEnable() {
